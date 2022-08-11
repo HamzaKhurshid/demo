@@ -16,7 +16,7 @@ const AuthRoute = ({ children }) => {
   return children;
 };
 
-const PodcastRoutes = [{
+const podcastRoutes = [{
   key: 'login',
   path: '/podcast/auth/login',
   component: <AuthRoute><Login /></AuthRoute>
@@ -30,4 +30,4 @@ const PodcastRoutes = [{
   component: <ProtectedRoute><Dashboard /></ProtectedRoute>
 }];
 
-export default PodcastRoutes;
+export default podcastRoutes;
