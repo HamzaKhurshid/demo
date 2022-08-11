@@ -1,11 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
-const Dashboard = () => {
+const FeaturedPodcasts = () => {
   const navigate = useNavigate();
-
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1>FeaturedPodcasts</h1>
       <button 
         onClick={() => {
           localStorage.removeItem('user_token');
@@ -18,4 +17,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default FeaturedPodcasts;

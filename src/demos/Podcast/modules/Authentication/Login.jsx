@@ -7,7 +7,7 @@ const Login = () => {
       <button 
         onClick={() => {
           localStorage.setItem('user_token', 'admin123');
-          navigate('/podcast/dashboard');
+          navigate('/podcast/featured-podcasts');
         }}
       >
         login into the app
