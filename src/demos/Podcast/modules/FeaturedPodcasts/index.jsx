@@ -1,18 +1,9 @@
-import { useNavigate } from 'react-router-dom';
+import Header from '../../../sharedComponents/Header';
 
 const FeaturedPodcasts = () => {
-  const navigate = useNavigate();
   return (
     <div>
-      <h1>FeaturedPodcasts</h1>
-      <button 
-        onClick={() => {
-          localStorage.removeItem('user_token');
-          navigate('/podcast/auth/login');
-        }}
-      >
-        Logout from the app
-      </button>
+      <Header />
     </div>
   );
 };
