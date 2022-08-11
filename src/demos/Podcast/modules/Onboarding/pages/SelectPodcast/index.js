@@ -1,4 +1,4 @@
-import Header from "../../../../../sharedComponents/Header"
+import { Header } from "../../../../../sharedComponents"
 import bgImg from '../../assets/bgImg.png'
 import casefile from '../../assets/casefile.png'
 import businesswar from '../../assets/businesswar.png'

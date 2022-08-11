@@ -1,4 +1,4 @@
-const Input = ({
+export const Input = ({
   id = '',
   name = '',
   label = '',
@@ -12,6 +12,4 @@ const Input = ({
       <input type={type} id={id} name={name} className={`px-4 py-3 border border-[#68737D] rounded-lg focus:outline-[#68737d] ${className}`} placeholder={placeholder}></input>
     </div>
   )
-}
-
-export default Input;
+};

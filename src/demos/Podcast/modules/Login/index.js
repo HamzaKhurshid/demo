@@ -1,5 +1,4 @@
-import Button from '../../../sharedComponents/Button';
-import Input from '../../../sharedComponents/Button';
+import { Button, Input } from '../../../sharedComponents';
 import { ReactComponent as Mic } from './assets/mic.svg'
 import { ReactComponent as Logo } from '../../../../logo.svg'
 

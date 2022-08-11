@@ -1,4 +1,4 @@
-import Header from '../../../sharedComponents/Header';
+import { Header } from '../../../sharedComponents';
 
 const FeaturedPodcasts = () => {
   return (
