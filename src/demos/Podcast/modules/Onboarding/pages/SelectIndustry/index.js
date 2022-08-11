@@ -1,5 +1,5 @@
-import Button from "../../../../../components/Button"
-import Header from '../../../../../components/Header'
+import Button from "../../../../../sharedComponents/Button"
+import Header from '../../../../../sharedComponents/Header'
 import { Industries } from "../../data"
 
 const SelectIndustry = () => {
