@@ -6,7 +6,7 @@ import Dashboard from '../modules/Dashboard';
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('user_token');
-  if (!token) return <Navigate gate to="/podcast/auth/login" replace />;
+  if (!token) return <Navigate to="/podcast/auth/login" replace />;
   return children;
 };
 
