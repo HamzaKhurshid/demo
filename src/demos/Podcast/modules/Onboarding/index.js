@@ -4,8 +4,8 @@ import SelectPodcast from "./pages/SelectPodcast"
 const Onboarding = () => {
   return(
     <div>
-      {/* <SelectIndustry/> */}
-      <SelectPodcast/>
+      <SelectIndustry/>
+      {/* <SelectPodcast/> */}
     </div>
   )
 }

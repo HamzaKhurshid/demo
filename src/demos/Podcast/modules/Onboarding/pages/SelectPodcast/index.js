@@ -31,7 +31,7 @@ const SelectPodcast = () => {
     <div className="h-[450px] bg-[#E7F4F2] flex justify-between items-center">
       <div className="w-[1140px] mx-auto flex justify-between items-center">
       <div className="text-[#2F3941] text-6xl font-bold w-[540px]">People are listening to these podcasts</div>
-      <img src={bgImg} />
+      <img src={bgImg} alt={''} />
       </div>
     </div>
     <div className="w-[1140px] flex flex-col justify-center mx-auto">
@@ -40,8 +40,8 @@ const SelectPodcast = () => {
         {
           podcasts.map(({ id, title, desc, img })=>{
             return (
-              <div className="w-[365px] h-[484px] border p-2 rounded-lg">
-                <img src={img} />
+              <div key={id} className="w-[365px] h-[484px] border p-2 rounded-lg">
+                <img src={img} alt={title} />
                 <div className=" text-2xl font-semibold mt-6 mb-2">{title}</div>
                 <div className=" text-base text-[#68737D] mb-5">{desc}</div>
               </div>

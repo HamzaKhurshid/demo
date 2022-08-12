@@ -1,17 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import podcastAppRoutes from "../demos/Podcast/routes";
+import { lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 const AppRoutes = () => {
+  const Podcast = lazy(() => import('../Demos/Podcast'));
   return (
     <BrowserRouter>
       <Routes>
-        {
-          podcastAppRoutes.map(({ path, key, component: Component }) => {
-            return (
-              <Route path={path} key={key} element={Component} />
-            );
-          })
-        }
+        <Route index path="/*" element={ <Navigate to={'/podcast'} /> } />
+        <Route path="/podcast/*" element={ <Suspense fallback={'Loading....'}><Podcast/></Suspense> } />
       </Routes>
     </BrowserRouter>
   );
