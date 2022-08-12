@@ -1,5 +1,5 @@
 import Button from '../../../components/Button';
-import Input from '../../../components/Button';
+import Input from '../../../components/Input';
 import { ReactComponent as Mic } from './assets/mic.svg'
 import { ReactComponent as Logo } from '../../../../logo.svg'
 
@@ -12,7 +12,7 @@ const Login = () => {
         <div className='text-3xl font-bold my-12 '>The Podcast App</div>
         <Input placeholder='Enter email address' className='w-[550px]' />
         <Input placeholder='Enter password' className='w-[550px]' />
-        <Button label='Get Started' className='w-[550px]' onClick={()=> localStorage.setItem('email', 'm.feroz@mailmunch.com')} />
+        <Button label='Get Started' className='w-[550px]' onClick={()=> window.location.href = '/podcast/new'} />
       </div>
     </div>
   )
