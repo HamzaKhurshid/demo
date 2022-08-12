@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 const AppRoutes = () => {
-  const Podcast = lazy(() => import('../Demos/Podcast'));
+  const Podcast = lazy(() => import('../demos/Podcast'));
   return (
     <BrowserRouter>
       <Routes>
