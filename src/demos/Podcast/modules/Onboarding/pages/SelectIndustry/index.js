@@ -1,7 +1,10 @@
+import { useState } from "react"
 import { Button, Header } from "../../../../../sharedComponents"
 import { Industries } from "../../data"
 
-const SelectIndustry = () => {
+const SelectIndustry = (props) => {
+  const { step, setStep } = props
+  const [ cat, setCat ] = useState({})
   return(
     <>
     <Header/>
@@ -12,11 +15,12 @@ const SelectIndustry = () => {
       <div className=" my-16 flex justify-center items-center flex-wrap w-[900px]">
         {
           Industries.map(({ id, label, value, icon })=> {
-            return <div key={id} className=" p-4 border border-[#68737D] rounded cursor-pointer w-60 flex items-center mb-5 mx-2"> <span className=" mr-3">{icon}</span>{label}</div>
+            const isSelected = cat[value]
+            return <div key={id} onClick={() => setCat({...cat, [value]: !cat[value] }) } className={` p-4 border border-[#C2D8D7] rounded cursor-pointer w-60 flex items-center mb-5 mx-2 ${isSelected ? 'bg-[#DEECED]' : ''}`}> <span className=" mr-3">{icon}</span>{label}</div>
           })
         }
       </div>
-      <Button label="Next" className="w-60 py-3 text-lg" />
+      <Button label="Next" className="w-60 py-3 text-lg" onClick={()=> setStep('selectPodcast')} />
     </div>
     </>
   )
